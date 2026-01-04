@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 
-# Stage 2: Production Stage
+# Stage 2: Run Stage
 
 FROM python:3.8-slim
 
