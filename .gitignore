@@ -3,3 +3,7 @@ dockerfile
 __pycache__/
 *.pyc
 .env
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+
