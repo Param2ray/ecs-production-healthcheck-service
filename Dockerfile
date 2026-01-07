@@ -8,10 +8,9 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-
 # Stage 2: Run Stage
 
-FROM python:3.8-slim
+FROM python:3.8-alpine
 
 WORKDIR /health
 
@@ -19,9 +18,7 @@ COPY --from=build /install /usr/local
 
 COPY health.py .
 
-RUN useradd --user-group --system --no-log-init --create-home myuser
-
-RUN chown -R myuser:myuser /home/myuser
+RUN adduser -D -h /home/myuser myuser
 
 USER myuser
 
