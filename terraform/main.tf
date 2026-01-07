@@ -21,7 +21,7 @@ module "ecs" {
 module "vpc" {
   source = "./modules/vpc"
 
-  name                 = var.project_name
+  name                 = var.name
   vpc_cidr             = var.vpc_cidr
   az_count             = var.az_count
   public_subnet_cidrs  = var.public_subnet_cidrs
