@@ -56,7 +56,7 @@ jobs:
         with:
           path: terraform
           auto_approve: true
-          refresh: false
+          refresh: true
           variables: |
             aws_region                = "${{ env.AWS_REGION }}"
             image_tag                 = "${{ env.IMAGE_TAG }}"
